@@ -31,7 +31,7 @@ class DatabaseDataSource(
         subscriberDAO.delete(id)
     }
 
-    override suspend fun deleteAllSUbscribers() {
+    override suspend fun deleteAllSubscribers() {
         subscriberDAO.deleteAll()
     }
 
