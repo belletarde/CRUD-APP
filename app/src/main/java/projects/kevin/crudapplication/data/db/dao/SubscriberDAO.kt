@@ -13,7 +13,7 @@ interface SubscribeDAO {
     suspend fun insert(subscriber: SubscriberEntity): Long
 
     @Update
-    suspend fun update(subscriber: SubscriberEntity): Long
+    suspend fun update(subscriber: SubscriberEntity)
 
     @Query("DELETE FROM subscriber WHERE id = :id")
     suspend fun delete(id: Long)
@@ -22,5 +22,5 @@ interface SubscribeDAO {
     suspend fun deleteAll()
 
     @Query("SELECT * FROM subscriber")
-    suspend fun getAll(): LiveData<List<SubscriberEntity>>
+    suspend fun getAll(): List<SubscriberEntity>
 }
